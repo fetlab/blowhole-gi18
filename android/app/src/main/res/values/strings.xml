@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Blowhole</string>
+
+    <string name="threshold">Threshold:</string>
+    <string name="chunk_length">Chunk length:</string>
+    <string name="minimum_chunk_length">Minimum chunk length:</string>
+    <string name="sampling_rate">Sampling rate:</string>
+    <string name="object">Object:</string>
+    <string name="save_settings">Save settings</string>
+
+    <string name="record_audio_denied">Blowhole requires "Record Audio" permission to work</string>
+</resources>

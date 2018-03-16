@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <TextView
+        android:id="@+id/tvThreshold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/threshold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tvChunkLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chunk_length"
+        tools:layout_editor_absoluteY="83dp"
+        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="83dp"
+        android:layout_marginStart="16dp" />
+
+    <TextView
+        android:id="@+id/tvMinChunkLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minimum_chunk_length"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="133dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvChunkLength" />
+
+    <TextView
+        android:id="@+id/tvObject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/object"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="233dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvSamplingRate" />
+
+    <TextView
+        android:id="@+id/tvSamplingRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sampling_rate"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="184dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvMinChunkLength"
+        app:layout_constraintStart_toEndOf="@+id/tvObject"
+        app:layout_constraintEnd_toEndOf="@+id/tvObject" />
+
+    <Spinner
+        android:id="@+id/spThreshold"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:spinnerMode="dialog"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="23dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/spChunkLength"
+        app:layout_constraintBottom_toTopOf="@+id/spChunkLength"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spChunkLength" />
+
+    <Spinner
+        android:id="@+id/spChunkLength"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="68dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintEnd_toEndOf="@+id/spMinChunkLength"
+        app:layout_constraintBottom_toTopOf="@+id/tvMinChunkLength"
+        app:layout_constraintTop_toTopOf="@+id/tvThreshold"
+        app:layout_constraintStart_toStartOf="@+id/spMinChunkLength" />
+
+    <Spinner
+        android:id="@+id/spObject"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="222dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="222dp"
+        android:layout_marginEnd="41dp"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Spinner
+        android:id="@+id/spSamplingRate"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="170dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginBottom="52dp"
+        app:layout_constraintEnd_toEndOf="@+id/spObject"
+        app:layout_constraintTop_toTopOf="@+id/spMinChunkLength"
+        app:layout_constraintStart_toStartOf="@+id/spObject"
+        app:layout_constraintBottom_toBottomOf="@+id/spObject" />
+
+    <Spinner
+        android:id="@+id/spMinChunkLength"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        tools:layout_editor_absoluteX="225dp"
+        tools:layout_editor_absoluteY="123dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="99dp"
+        app:layout_constraintEnd_toEndOf="@+id/spSamplingRate"
+        app:layout_constraintTop_toTopOf="@+id/spThreshold"
+        app:layout_constraintStart_toStartOf="@+id/spSamplingRate"
+        app:layout_constraintBottom_toBottomOf="@+id/spObject" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/save_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="48dp" />
+
+</android.support.constraint.ConstraintLayout>
